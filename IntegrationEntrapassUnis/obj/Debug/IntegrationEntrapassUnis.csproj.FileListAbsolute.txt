@@ -1,0 +1,15 @@
+C:\Users\Lab02\source\repos\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csprojResolveAssemblyReference.cache
+C:\Users\Lab02\source\repos\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.FormPrincipal.resources
+C:\Users\Lab02\source\repos\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.Properties.Resources.resources
+C:\Users\Lab02\source\repos\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csproj.GenerateResource.Cache
+C:\Users\Lab02\source\repos\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csproj.CoreCompileInputs.cache
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.FormPrincipal.resources
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.Properties.Resources.resources
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csproj.GenerateResource.Cache
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csproj.CoreCompileInputs.cache
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Debug\IntegrationEntrapassUnis.exe.config
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Debug\IntegrationEntrapassUnis.exe
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Debug\IntegrationEntrapassUnis.pdb
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Debug\Advantage.Data.Provider.dll
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.exe
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.pdb
