@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace EntrapassUnisIntegration.Classes
 {
@@ -15,6 +16,8 @@ namespace EntrapassUnisIntegration.Classes
         string userName;
         string connectionString;
         string nameDataBase;
+
+        SqlConnection sqlConnection;
 
         public PessoaUnis(string serverName, string nameDataBase, string ID, string userName)
         {
@@ -28,11 +31,11 @@ namespace EntrapassUnisIntegration.Classes
 
         }
 
-        public bool openConnection()
+        private bool openConnection()
         {
             try
             {
-                SqlConnection sqlConnection = new SqlConnection(connectionString);
+                sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
 
                 return true;
@@ -43,9 +46,46 @@ namespace EntrapassUnisIntegration.Classes
             }
         }
 
-        public void selectPessoas()
+        private bool closeConnection()
         {
-            
+            try
+            {
+                sqlConnection.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public DataTable SelectDatePessoas(string date)
+        {
+            try
+            {
+                bool connection = openConnection();
+                if (connection)
+                {
+                    SqlCommand sqlCommand = new SqlCommand(string.Format("SELECT * FROM tUser WHERE C_UdatePassword >= {0}", date), sqlConnection);
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(reader);
+
+                    closeConnection();
+                    return dataTable;
+                }
+                else
+                    closeConnection();
+                    return null;
+            }
+            catch
+            {
+                closeConnection();
+                return null;
+            }
+
         }
     }
 }

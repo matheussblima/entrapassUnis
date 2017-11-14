@@ -34,11 +34,11 @@
             // 
             // buttonConectar
             // 
-            this.buttonConectar.Location = new System.Drawing.Point(155, 96);
+            this.buttonConectar.Location = new System.Drawing.Point(189, 12);
             this.buttonConectar.Name = "buttonConectar";
-            this.buttonConectar.Size = new System.Drawing.Size(75, 23);
+            this.buttonConectar.Size = new System.Drawing.Size(61, 23);
             this.buttonConectar.TabIndex = 0;
-            this.buttonConectar.Text = "Conectar ao DB";
+            this.buttonConectar.Text = "sync";
             this.buttonConectar.UseVisualStyleBackColor = true;
             this.buttonConectar.Click += new System.EventHandler(this.buttonConectar_Click);
             // 
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 164);
+            this.ClientSize = new System.Drawing.Size(259, 44);
             this.Controls.Add(this.buttonConectar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

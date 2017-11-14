@@ -40,7 +40,32 @@ namespace EntrapassUnisIntegration.Classes
                     MessageBox.Show(adsDataReader.GetValue(iField) + " ");
             }
 
+        }
 
+
+        public bool insertPessoas(string UserName, string CardInfo1)
+        {
+            try
+            {
+                openConnection(serverSource);
+
+                AdsCommand adsCommand = adsConnection.CreateCommand();
+                adsCommand.CommandText = string.Format("INSERT INTO Card (UserName, CardInfo1) VALUES ('{0}', '{1}');", UserName, CardInfo1);
+                int executeNonQuery = adsCommand.ExecuteNonQuery();
+
+                closeConnection();
+
+                if (executeNonQuery == 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                closeConnection();
+                return false;
+            }
 
         }
 

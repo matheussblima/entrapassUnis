@@ -13,3 +13,4 @@ C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Deb
 C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\bin\Debug\Advantage.Data.Provider.dll
 C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.exe
 C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.pdb
+C:\Users\Lab02\Desktop\IntegrationEntrapassUnis\IntegrationEntrapassUnis\obj\Debug\IntegrationEntrapassUnis.csprojResolveAssemblyReference.cache
