@@ -28,8 +28,6 @@ namespace IntegrationEntrapassUnis
 
         private void buttonConectar_Click(object sender, EventArgs e)
         {
-            //PessoaEntrapass pessoasEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
-            //pessoasEntrapass.selectPessoas();
 
             string regRead = RegRead(CHAVE_DATA_ATUALIZACAO);
 
@@ -50,23 +48,20 @@ namespace IntegrationEntrapassUnis
 
             PessoaEntrapass pessoaEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
 
-            if (pessoaUnisTable != null)
-            {
-                foreach (DataRow row in pessoaUnisTable.Rows)
-                {
-                    string id = row["L_ID"].ToString();
-                    string name = row["C_Name"].ToString();
-
-                    pessoaEntrapass.insertPessoas(name, id);
-                }
-            }
+            pessoaEntrapass.selectPessoas();
 
 
-            // select * from unis WHERE data_criacao > data_ultima_atualizacao
-            // while (read_do_select()))
-            // INSERT INTO db_do_entrapass 
+            //if (pessoaUnisTable != null)
+            //{
+            //    foreach (DataRow row in pessoaUnisTable.Rows)
+            //    {
+            //        string id = row["L_ID"].ToString();
+            //        string name = row["C_Name"].ToString();
 
-            // atualizou OK sem erros? vamos colocar a data e hora que foi atualizado no registro.
+            //        pessoaEntrapass.insertPessoas(name, id);
+            //    }
+            //}
+        
             //RegWrite("ultimaAtualizacao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
         }
 
