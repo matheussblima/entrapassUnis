@@ -46,23 +46,43 @@ namespace IntegrationEntrapassUnis
             PessoaUnis pessoaUnis = new PessoaUnis("DESKTOP-57NJIV7\\SQLEXPRESS", "UNIS", "unisuser", "unisamho");
             DataTable pessoaUnisTable = pessoaUnis.SelectDatePessoas(dataUltimaAtualizacao);
 
-            PessoaEntrapass pessoaEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
+            //PessoaEntrapass pessoaEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
 
-            pessoaEntrapass.selectPessoas();
+            //pessoaEntrapass.selectPessoas();
 
 
-            //if (pessoaUnisTable != null)
-            //{
-            //    foreach (DataRow row in pessoaUnisTable.Rows)
-            //    {
-            //        string id = row["L_ID"].ToString();
-            //        string name = row["C_Name"].ToString();
+            if (pessoaUnisTable != null)
+            {
+                foreach (DataRow row in pessoaUnisTable.Rows)
+                {
+                    string id = row["L_ID"].ToString();
+                    string name = row["C_Name"].ToString();
 
-            //        pessoaEntrapass.insertPessoas(name, id);
-            //    }
-            //}
-        
-            //RegWrite("ultimaAtualizacao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                    string cardFormatted = id;
+
+                    if (cardFormatted.Length < 10)
+                    {
+                        int amountOfZeros = 10 - cardFormatted.Length;
+
+                        while (amountOfZeros > 0)
+                        {
+                            cardFormatted = '0' + cardFormatted;
+                            amountOfZeros--;
+                        }
+
+                        string startCardFormatted = cardFormatted.Substring(0,5);
+                        string endCardFormatted = cardFormatted.Substring(5, 5);
+                        cardFormatted = startCardFormatted + ":" + endCardFormatted;
+                    }
+
+                   string dateAndHourCreate = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                   string dateCreate = DateTime.Now.ToString("dd/MM/yyyy 00:00:00");
+
+                    // pessoaEntrapass.insertPessoas(id, name, dateAndHourCreate, cardFormatted, cardNumber, dateCreate, dateCreate);
+                }
+            }
+
+            RegWrite("ultimaAtualizacao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
         }
 
 
