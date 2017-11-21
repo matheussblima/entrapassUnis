@@ -44,7 +44,7 @@ namespace EntrapassUnisIntegration.Classes
         }
 
 
-        public bool insertPessoas(string UserName, string CardInfo1)
+        public bool insertPessoas(int pkData, string userName, string cardInfo1, string creationDate, string cardNumberFormatted, string cardNumber, string startDate, string endDate)
         {
             try
             {
@@ -63,7 +63,10 @@ namespace EntrapassUnisIntegration.Classes
                     "DisablePassback,FkBadging,PrintIssue,UseSpecificBarcodeValue,BarcodeValue,ExtendedAccessDelay,DoubleTripleSwipe,CreationDate,ModificationDate," +
                     "ModificationCount,IsNIP,NIPSize,EncryptedNIP,PrintIssueState,PrintIssueStateChanged,FkPrintIssueStateChanged,PrintIssueAddress,ExternalUserID," +
                     "GoPass,GoPassLanguage,GoPassEncryptedPassword,GoPassReference,GoPassPhoneUUID,FkActiveDirectory,LDAPUniqueId,LDAPFieldMapping,IsComment,XMLData)" +
-                    " VALUES ('{0}', '{1}');", UserName, CardInfo1);
+                    " VALUES ('{0}', '{1}');", pkData, 5, 43, 0, 0, 0, 0, 0, 0, pkData, 0, 0, 0, 1, 1, creationDate, 1, cardNumberFormatted, cardNumber, 5, userName, "{}", "{}", 
+                    "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}",
+                    "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", 0, startDate, 0, endDate, 0, 0, 0, 0, 0, 0, 0, 0, 0, "{}", "{}", "{}", "{}", "{}", "{}", 14,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "{}", 0, 0, creationDate, creationDate, 1, 0, 5, "{}", 0, "30/12/1899 00:00:00", 0, 0, 0.0000, 0, 0, "{}", "{}", "{}", 0, "{}", "{}", 0, "<?xml version=\"1.0\" encoding=\"UTF-8\"?><XmlData_Card/>");
                 int executeNonQuery = adsCommand.ExecuteNonQuery();
 
                 closeConnection();
