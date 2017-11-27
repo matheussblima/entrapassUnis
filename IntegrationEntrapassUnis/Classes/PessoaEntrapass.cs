@@ -44,7 +44,7 @@ namespace EntrapassUnisIntegration.Classes
         }
 
 
-        public bool insertPessoas(int pkData, string userName, string creationDate, string cardNumberFormatted, string cardNumber, string startDate, string endDate)
+        public bool insertPessoas(string pkData, string userName, DateTime creationDate, string cardNumberFormatted, string cardNumber, string startDate, string endDate)
         {
             try
             {
@@ -63,15 +63,16 @@ namespace EntrapassUnisIntegration.Classes
                     "DisablePassback,FkBadging,PrintIssue,UseSpecificBarcodeValue,BarcodeValue,ExtendedAccessDelay,DoubleTripleSwipe,CreationDate,ModificationDate," +
                     "ModificationCount,IsNIP,NIPSize,EncryptedNIP,PrintIssueState,PrintIssueStateChanged,FkPrintIssueStateChanged,PrintIssueAddress,ExternalUserID," +
                     "GoPass,GoPassLanguage,GoPassEncryptedPassword,GoPassReference,GoPassPhoneUUID,FkActiveDirectory,LDAPUniqueId,LDAPFieldMapping,IsComment,XMLData)" +
-                    " VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}','{9}', '{10}' ,'{11}', '{12}','{13}', '{14}','{15}', '{16}, '{17}', '{18}', " +
-                    "'{19}, '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}','{29}', '{30}' ,'{31}', '{32}','{33}', '{34}','{35}', '{36}, '{37}', '{38}'," +
-                    " '{39}, '{40}', '{41}', '{42}', '{43}', '{44}', '{45}', '{46}', '{47}', '{48}','{49}', '{50}', '{61}', '{62}', '{63}', '{64}', '{65}', '{66}', '{67}', '{68}'," +
-                    "'{69}', '{70}', '{71}', '{72}', '{73}', '{74}', '{75}', '{76}', '{77}', '{78}','{79}', '{80}', '{81}', '{82}', '{83}', '{84}', '{85}', '{86}', '{87}', '{88}','{89}'," +
-                    " '{90}', '{91}', '{92}', '{93}', '{94}', '{95}', '{96}', '{97}', '{98}','{99}', '{100}', '{101}', '{102}', '{103}', '{104}', '{105}', '{106}', '{107}', '{108}','{109}'," +
-                    " '{110}', '{111}', '{112}', '{113}', '{114}', '{115}', '{116}', '{117}');", pkData, 5, 43, 0, 0, 0, 0, 0, 0, pkData, 0, 0, 0, 1, 1, creationDate, 1, cardNumberFormatted, cardNumber, 5, userName, "{}", "{}", 
-                    "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}",
-                    "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", 0, startDate, 0, endDate, 0, 0, 0, 0, 0, 0, 0, 0, 0, "{}", "{}", "{}", "{}", "{}", "{}", 14,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "{}", 0, 0, creationDate, creationDate, 1, 0, 5, "{}", 0, "30/12/1899 00:00:00", 0, 0, 0.0000, 0, 0, "{}", "{}", "{}", 0, "{}", "{}", 0,
+                    " VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10} , {11}, {12}, {13}, {14} , {15}, {16}, '{17}', '{18}', " +
+                    "{19}, '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}','{29}', '{30}' ,'{31}', '{32}','{33}', '{34}','{35}', '{36}', '{37}', '{38}'," +
+                    " '{39}', '{40}', '{41}', '{42}', '{43}', '{44}', '{45}', '{46}', '{47}', '{48}','{49}', '{50}', '{51}', '{52}', '{53}', '{54}', '{55}', '{56}', '{57}', '{58}'," +
+                    "'{59}', '{60}', '{61}', {62}, '{63}', {64}, '{65}', {66}, {67}, {68}," +
+                    "{69}, {70}, {71}, {72}, {73}, {74}, {75}, '{76}', '{77}', {78},'{79}', '{80}', {81}, {82}, {83}, {84}, {85}, {86}, {87}, {88}, {89}," +
+                    " {90}, {91}, '{92}', {93}, {94}, '{95}', '{96}', {97}, {98}, {99}, '{100}', {101}, '{102}', {103}, {104}, {105}, {106}, {107}, '{108}','{109}'," +
+                    " '{110}', {111}, '{112}', '{113}', {114}, '{115}');", pkData, 5, 43, 0, 0, 0, 0, 0, 0, pkData, 0, 0, 0, 1, 1, "DATETIME GETDATE()", 1, cardNumberFormatted, cardNumber, 5, userName, "null", "null", 
+                    "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null",
+                     "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", 0, startDate, 0, endDate, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", "null", "null", "null", "null", "null", 14,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, 0, creationDate, creationDate, 1, 0, 5, "null", 0, "30/12/1899 00:00:00", 0, 0, 0.0000, 0, 0, "null", "null", "null", 0, "null", "null", 0,
                     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><XmlData_Card/>");
                 int executeNonQuery = adsCommand.ExecuteNonQuery();
 
@@ -83,8 +84,8 @@ namespace EntrapassUnisIntegration.Classes
                 }
                 return false;
             }
-            catch
-            {
+            catch(Exception erro)
+             {
                 closeConnection();
                 return false;
             }

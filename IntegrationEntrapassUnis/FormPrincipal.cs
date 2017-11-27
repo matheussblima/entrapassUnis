@@ -46,14 +46,14 @@ namespace IntegrationEntrapassUnis
             PessoaUnis pessoaUnis = new PessoaUnis("DESKTOP-57NJIV7\\SQLEXPRESS", "UNIS", "unisuser", "unisamho");
             DataTable pessoaUnisTable = pessoaUnis.SelectDatePessoas(dataUltimaAtualizacao);
 
-            //PessoaEntrapass pessoaEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
+            PessoaEntrapass pessoaEntrapass = new PessoaEntrapass(@"c:\Program Files (x86)\Kantech\Server_CE_Demo\Data");
 
-            //pessoaEntrapass.selectPessoas();
+            pessoaEntrapass.selectPessoas();
 
 
             if (pessoaUnisTable != null)
             {
-                foreach (DataRow row in pessoaUnisTable.Rows)
+               foreach (DataRow row in pessoaUnisTable.Rows)
                 {
                     string id = row["L_ID"].ToString();
                     string name = row["C_Name"].ToString();
@@ -75,14 +75,14 @@ namespace IntegrationEntrapassUnis
                         cardFormatted = startCardFormatted + ":" + endCardFormatted;
                     }
 
-                   string dateAndHourCreate = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                   DateTime dateAndHourCreate = DateTime.Now;
                    string dateCreate = DateTime.Now.ToString("dd/MM/yyyy 00:00:00");
 
-                    // pessoaEntrapass.insertPessoas(id, name, dateAndHourCreate, cardFormatted, cardNumber, dateCreate, dateCreate);
+                    pessoaEntrapass.insertPessoas(id, name, dateAndHourCreate, "00023:43423","00000000000002997975", dateCreate, dateCreate);
                 }
             }
 
-            RegWrite("ultimaAtualizacao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            //RegWrite("ultimaAtualizacao", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
         }
 
 
