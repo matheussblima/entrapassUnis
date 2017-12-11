@@ -69,11 +69,11 @@ namespace EntrapassUnisIntegration.Classes
                     "'{59}', '{60}', '{61}', {62}, '{63}', {64}, '{65}', {66}, {67}, {68}," +
                     "{69}, {70}, {71}, {72}, {73}, {74}, {75}, '{76}', '{77}', {78},'{79}', '{80}', {81}, {82}, {83}, {84}, {85}, {86}, {87}, {88}, {89}," +
                     " {90}, {91}, '{92}', {93}, {94}, '{95}', '{96}', {97}, {98}, {99}, '{100}', {101}, '{102}', {103}, {104}, {105}, {106}, {107}, '{108}','{109}'," +
-                    " '{110}', {111}, '{112}', '{113}', {114}, '{115}');", pkData, 5, 43, 0, 0, 0, 0, 0, 0, pkData, 0, 0, 0, 1, 1, "DATETIME GETDATE()", 1, cardNumberFormatted, cardNumber, 5, userName, "null", "null", 
-                    "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null",
-                     "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", 0, startDate, 0, endDate, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", "null", "null", "null", "null", "null", 14,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, 0, creationDate, creationDate, 1, 0, 5, "null", 0, "30/12/1899 00:00:00", 0, 0, 0.0000, 0, 0, "null", "null", "null", 0, "null", "null", 0,
-                    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><XmlData_Card/>");
+                    " '{110}', {111}, '{112}', '{113}', {114}, '{115}');", pkData, 5, 43, 0, 0, 0, 0, 0, 0, pkData, 0, 0, 0, 1, 1, "DATETIME GETDATE()", 1, cardNumberFormatted, cardNumber, 5, userName, null, null, null,
+                    null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                    null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, "CURDATE()", 0, "CURDATE()", 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, 0, 0, "CURRENT_TIMESTAMP()", "CURRENT_TIMESTAMP()", 1, 0, 5, null, 0,
+                    "CURRENT_TIMESTAMP()", 0, 0, 0, 0, 0, null, null, null, 0, null, null, 0, "<?xml version=\"1.0\" encoding=\"UTF-8\"?><XmlData_Card/>");
+
                 int executeNonQuery = adsCommand.ExecuteNonQuery();
 
                 closeConnection();
